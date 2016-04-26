@@ -8,6 +8,11 @@ namespace Sortowanie
 {
     public class Program
     {
+        /// <summary>
+        /// metoda dzielaca tabele na elementy
+        /// </summary>
+        /// <param name="tab">tablica ktora sie dzieli</param>
+        /// <returns>elementy tabeli</returns>
         public static int[][] divide(int[] tab)
         {
             int[][] output = new int[tab.Count()][];
@@ -57,6 +62,11 @@ namespace Sortowanie
             return output;
         }
 
+        /// <summary>
+        /// polaczenie elementow tabeli w uporzadkowana tabele
+        /// </summary>
+        /// <param name="tab">elementy tabeli</param>
+        /// <returns>postrtowana tabela</returns>
         public static int[] merge(int[][] tab)
         {
             List<int> buffor = new List<int>();
@@ -77,12 +87,20 @@ namespace Sortowanie
             return buffor.ToArray();
         }
 
+        /// <summary>
+        /// sortowanie elementow
+        /// </summary>
+        /// <param name="tab">tabela ktora nalezy posortowac</param>
         public static void sort(ref int[] tab)
         {
             int[][] buffor = divide(tab);
             tab = merge(buffor);
         }
 
+        /// <summary>
+        /// glowna metoda w ktorej wywolywane jest sortowanie
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             int[] arr = { 14, 7, 3, 12, 9, 11, 6, 2 };
