@@ -57,6 +57,11 @@ namespace Sortowanie
             return output;
         }
 
+        public static int[] merge(int[][] tab)
+        {
+            return new int[0];
+        }
+
         public static void sort(ref int[] tab)
         {
 

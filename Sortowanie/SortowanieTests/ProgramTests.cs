@@ -33,9 +33,28 @@ namespace Sortowanie.Tests
 
             int[][] output = Program.divide(arr);
 
-            for(int i = 0; i < arr.Count(); i++)
+            for (int i = 0; i < arr.Count(); i++)
             {
                 Assert.AreEqual(arr[i], output[i][0]);
+            }
+        }
+
+        [TestMethod()]
+        public void mergeTest()
+        {
+            int[] sorted = { 2, 3, 6, 7, 9, 11, 12, 14 };
+            int[][] arr = new int[8][];
+            for(int i = 0; i < 8; i++)
+            {
+                arr[i] = new int[1];
+                arr[i][0] = sorted[i];
+            }
+
+            int[] output = Program.merge(arr);
+
+            for(int i = 0; i < output.Count(); i++)
+            {
+                Assert.AreEqual(output[i], sorted[i]);
             }
         }
     }
