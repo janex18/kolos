@@ -8,6 +8,11 @@ namespace Sortowanie
 {
     public class Program
     {
+        public static int[][] divide(int[] tab)
+        {
+            return new int[0][];
+        }
+
         public static void sort(ref int[] tab)
         {
 
