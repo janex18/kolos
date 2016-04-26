@@ -8,6 +8,11 @@ namespace Sortowanie
 {
     public class Program
     {
+        public static void sort(ref int[] tab)
+        {
+
+        }
+
         public static void Main(string[] args)
         {
 

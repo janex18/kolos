@@ -12,9 +12,17 @@ namespace Sortowanie.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void MainTest()
+        public void sortTest()
         {
-            Assert.Fail();
+            int[] arr = { 14, 7, 3, 12, 9, 11, 6, 2 };
+            int[] sorted = { 2, 3, 6, 7, 9, 11, 12, 14 };
+
+            Program.sort(ref arr);
+
+            for(int i = 0; i < arr.Count(); i++)
+            {
+                Assert.AreEqual(arr, sorted);
+            }
         }
     }
 }
