@@ -59,17 +59,36 @@ namespace Sortowanie
 
         public static int[] merge(int[][] tab)
         {
-            return new int[0];
+            List<int> buffor = new List<int>();
+            int min = 1000;
+            int last = 0;
+
+            for (int p = 0; p < tab.Count(); p++) 
+            {
+                for (int i = 0; i < tab.Count(); i++)
+                {
+                    if (tab[i][0] < min && tab[i][0] > last) min = tab[i][0];
+                }
+                buffor.Add(min);
+                last = min;
+                min = 1000;
+            }
+
+            return buffor.ToArray();
         }
 
         public static void sort(ref int[] tab)
         {
-
+            int[][] buffor = divide(tab);
+            tab = merge(buffor);
         }
 
         public static void Main(string[] args)
         {
+            int[] arr = { 14, 7, 3, 12, 9, 11, 6, 2 };
+            int[] sorted = { 2, 3, 6, 7, 9, 11, 12, 14 };
 
+            Program.sort(ref arr);
         }
     }
 }

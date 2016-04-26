@@ -21,7 +21,7 @@ namespace Sortowanie.Tests
 
             for (int i = 0; i < arr.Count(); i++)
             {
-                Assert.AreEqual(arr, sorted);
+                Assert.AreEqual(arr[i], sorted[i]);
             }
         }
 
